@@ -28,3 +28,11 @@
 .modal-header{
 	border-bottom: 0px solid #e9ecef !important;
 }
+
+input[type="text"]{
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+}

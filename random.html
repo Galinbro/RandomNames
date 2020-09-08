@@ -13,16 +13,33 @@
 
 	<div id="test" class="container-fluid" style="height: 100vh; position: relative; background: rgb(8,49,91); background: linear-gradient(180deg, rgba(8,49,91,1) 25%, rgba(11,67,140,1) 50%, rgba(13,112,154,1) 75%);">
 
-		<div class="row" style="position: absolute; bottom: 45%; left: 10%; width: 176vh;">
-		    <div class="col-4">
-		      <input id="winner" type="text" class="form-control form-control-lg" >
-		    </div>
-		    <div class="col-8"></div>
-	    </div>
+		<div id="shakyshaky">
+			<div class="row" style="position: absolute; bottom: 45%; left: 10%; width: 176vh;">
+				    <div class="col-4">
+				    	<img src="Dist/img/Winner.png" alt="curva azul" style="height: 40vh">
+				      <!-- <input id="winner" type="text" class="form-control form-control-lg" > -->
+				    </div>
+				    <div class="col-8"></div>
+			    </div>
+			    <div class="row" style="position: absolute; bottom: 43%; left: 17%; width: 176vh;">
+				    <div class="col-3">
+				      <input id="winner" type="text" class="form-control form-control-lg" style="text-align: center;">
+				    </div>
+				    <div class="col-9"></div>
+			    </div>
+		</div>
+		
 
+		<div class="row" style="position: absolute;bottom: 10%; left: 40%;">
+			<img src="Dist/img/shine.png" alt="curva azul" style="height: 90vh">
+		  <!-- <img src="Dist/img/phone4.png" alt="phone" style="height: 58vh"> -->
+		</div>
+		
 		<div class="row" style="position: absolute;bottom: 25%; left: 50%;">
+		<!-- 	<img src="Dist/img/shine.png" alt="curva azul" style="height: 80vh"> -->
 		  <img src="Dist/img/phone4.png" alt="phone" style="height: 58vh">
 		</div>
+
 		<div>
 			<img src="Dist/img/curva-fuisia.png" alt="curva azul" style="position: absolute; bottom: 1%; left: 0%; width: 176vh; height: 400px;">
 		</div>
@@ -33,12 +50,6 @@
 			<a href="index.html"><img src="Dist/img/atos.png" alt="atos logo" style="position: absolute; bottom: 3%; right: 2%; height: 60px"></a>
 		</div>
 	</div>
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade custom-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -55,6 +66,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -85,6 +97,7 @@
 	
 	function appearText(){
 		$("#winner").val(name);
+		// $( "#shakyshaky" ).effect( "shake" );
 
 		var myConfetti = confetti.create(myCanvas, {
 			  resize: true,
