@@ -21,7 +21,7 @@
 				    </div>
 				    <div class="col-8"></div>
 			    </div>
-			    <div class="row" style="position: absolute; bottom: 45%; left: 17%; width: 176vh;">
+			    <div class="row" style="position: absolute; bottom: 45.5%; left: 15%; width: 176vh;">
 				    <div class="col-3">
 				      <input id="winner" type="text" class="form-control form-control-lg" style="text-align: center;">
 				    </div>
@@ -30,8 +30,8 @@
 		</div>
 		
 
-		<div class="row" style="position: absolute;bottom: 10%; left: 40%;">
-			<img src="Dist/img/shine.png" alt="curva azul" style="height: 90vh">
+		<div class="row" style="position: absolute;bottom: 0%; left: 25%;">
+			<img src="Dist/img/shine.png" alt="curva azul" style="height: 130vh">
 		  <!-- <img src="Dist/img/phone4.png" alt="phone" style="height: 58vh"> -->
 		</div>
 		
@@ -56,14 +56,27 @@
   <div class="modal-dialog modal-dialog-centered custom-modal-content modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="col-12 modal-title text-center" id="exampleModalLongTitle" style="font-size: 80px; color: #174A84"></h1>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="appearText()">
+        <h1 class="col-12 modal-title text-center" id="exampleModalLongTitle" style="font-size: 75px; color: #174A84"></h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="appearModal()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
     </div>
   </div>
 </div>
+
+<div class="modal fade custom-modal" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered custom-modal-content2 modal-lg" role="document">
+	  <div class="modal-content">
+		<div class="modal-header" style="margin-left: -40px; width: 400px;">
+		  <p class="col-12 modal-title text-center" id="exampleModalLongTitle2" style="font-size: 30px; color: #174A84; margin-top: -100px; width: 90px;"></p>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="appearText()">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+	  </div>
+	</div>
+  </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
@@ -73,9 +86,69 @@
 <script type="text/javascript">
 	var name;
 	var myCanvas;
+	var questions = [
+		"que proyectos personales o de la escuela tienes de los cuales estas mas orgullosa(o)?",
+		"hobbies o actividades que disfrutes hacer fuera del trabajo",
+		"en que tecnologias de programacion o desarrollo te consideras bueno?",
+		"Cual es tu animal favorito?",
+		"Si pudieras andar con una celebridad con quien seria?",
+		"Cual es tu pelicula favorita?",
+		"Cual es tu banda/cantante favorito?",
+		"Hay algo que te de miedo?",
+		"Cual es tu banda favorita?",
+		"En tiempos de pandemia, cual es tu actividad favorita?",
+		"Algun lugar que te gustaria conocer?",
+		"Cual es tu mascota preferida? ",
+		"Que es lo que mas te gusta del equipo de ignite?",
+		"Cual es tu banda favorita?",
+		"Cual es la ciudad a la que hayas ido que mas te gusta?",
+		"Si pudieras vivir en otro pais, cual seria?",
+		"Cual es tu serie favorita?",
+		"Cuales son tus videojuegos favoritos?",
+		"¿Cuál es tu 'gusto culposo' musical?",
+		"¿A que le tienes miedo?",
+		"¿Cuál estación del año prefieres?",
+		"¿Cuál es la comida que menos te gusta?",
+		"¿Quién es tu superhéroe o superheroína favorito(a)?",
+		"Cual es tu color favorito?",
+		"Voulez-vous coucher avec moi, ce soir?",
+		"Prefieres pelear contra 20 patos del tama;o de un toro o contra 25 toros de tama;o de un pato?",
+		"Cual es tu bebida favorita?",
+		"Esos son reebok o son nike? (Marca de tenis preferida)",
+		"Has reprobado una clase?? En carrera o prepa.",
+		"Haz tenido novia/novio?? Si si, cuantos?",
+		"Si el dinero no importara y pudieras hacer lo que quieras?? A que te hubieras dedicado??",
+		"Te han operado? Te has roto un hueso??",
+		"Te pondrias un tatuaje??",
+		"Cual es la finalidad del patito de hule?",
+		"Que es algo que siempre has querido hacer pero no has hecho?",
+		"Cual dirias que es tu mayor virtud?",
+		"Cual dirias que es tu mayor debilidad?",
+		"Cual es el tipo de pan que mas te gusta (dulce o salado)?",
+		"Que generos de musica o que grupos musicales te gustan?",
+		"Que otros intereses tienes aparte del area de TI?",
+		"Has viajado dentro o fuera del pais? A donde?",
+		"Vino? Cerveza? O licor?",
+		"Alguna serie que recomiendes? ",
+		"¿Qué es algo que no toleras de una persona?",
+		"¿Cuá ha sido el momento más representativo de tu vida?",
+		"¿Si tuvieras un súper poder cuál sería?",
+		"¿Con qué tipo de animal te identificas?",
+		"Si fueras millonario ¿qué sería lo primero que harías?",
+		"Tu top 3 en spotify?",
+		"Si no hubieras escogido tu path o tu carrera, que te hubiera gustado ser?",
+		"En estos momentos a donde quisieras viajar?",
+		"Algun comestible que NO te guste, pero a los demas si?",
+		"Cual es tu pelicula/serie que mas te a gustado hasta ahora? y por que es Sangre por sangre?",
+		"Como se llama el hermano yucateco de emilio?",
+		"Como se llama el hermano regio de emilio?",
+		"Como se llama el hermano chiapaneco de emilio?",
+		"Cual es el hermano de emilio con el que tenemos contacto actualmente?",
+		"Cual es tu color fav"];
+	
 	var names = [
 		"Andres",
-		"Fernando",
+		"Fer",
 		"Emilio",
 		"Max",
 		"Alexis",
@@ -91,9 +164,15 @@
 	  return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 	function winner(){
-		name = names[randomInteger(0,names.length-1)]
+		name = names[randomInteger(0,names.length-1)];
 		$("#winner").val(name);
 	}
+	
+	function appearModal(){
+		$('#exampleModalCenter2').modal('show');
+		$("#exampleModalLongTitle2").text(questions[randomInteger(0,questions.length-1)]);
+	}
+	// appearModal();
 	
 	function appearText(){
 		$("#winner").val(name);
@@ -273,21 +352,7 @@
 </script>
 
 <script type="text/javascript">
-	// var point = { 
-	// 			1:[25%,5%],
-	// 			2:[30%,20%],
-	// 			3:[20%,35%],
-	// 			4:[60%,5%],
-	// 			5:[65%,20%],
-	// 			6:[57%,35%],
-	// 			7:[80%,15%],
-	// 			8:[85%,30%],
-	// 			9:[75%,45%],
-	// 			10:[90%,5%]
-	// 		};
-	// $( document ).ready(function() {
-	// 	// $("#winner").val(names[randomInteger(0,names.length-1)]);
-	// });
+	
 </script>
 </body>
 </html>

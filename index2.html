@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Roulette.js Demo</title>
+        <link rel="stylesheet" href="Dist/boostrap/bootstrap.min.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/ui-lightness/jquery-ui.css">
+        <link rel="stylesheet" href="Dist/boostrap/bootstrap-responsive.css"></link>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/ui-lightness/jquery-ui.css">
+        <link rel="stylesheet" href="demo.css"></link>
+    </head>
+	<body style="background: url('Dist/img/preguntados/bg-lg.jpg') no-repeat;background-size: cover;">
+		
+		<div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span4">
+                    
+                </div>
+                <div class="span4">
+                    <div class="row">
+                        <div class="span4">
+                            <img src="Dist/img/preguntados/chara-willy-stand.png" alt="Preguntados" style="height: 100px; float: right;">
+                        </div>
+                        <div class="span8">
+                            <h1 class="text-center">
+                                Preguntados
+                            </h1>
+                            <h1 class="text-center">
+                                <span style='color: yellow'>I</span>
+                                <span style='color: green'>g</span>
+                                <span style='color: blue'>n</span>
+                                <span style='color: purple'>i</span>
+                                <span style='color: pink'>t</span>
+                                <span style='color: red'>i</span>
+                                <span style='color: orangered'>e</span>
+                                <span style='color: orange'>s</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4"></div>
+              </div>
+
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="roulette_container">
+						<div class="roulette" style="display:none;">
+							<img src="Dist/img/ignitePhotos/alexis.jpg"/>
+							<img src="Dist/img/ignitePhotos/ana.PNG"/>
+							<img src="Dist/img/ignitePhotos/andres.jpg"/>
+							<img src="Dist/img/ignitePhotos/antonio.jpg"/>
+							<img src="Dist/img/ignitePhotos/cesar.png"/>
+							<img src="Dist/img/ignitePhotos/emilio.png"/>
+							<img src="Dist/img/ignitePhotos/fernando.jpg"/>
+							<img src="Dist/img/ignitePhotos/ivan.jpg"/>
+							<img src="Dist/img/ignitePhotos/leslie.png"/>
+							<img src="Dist/img/ignitePhotos/max.png"/>
+                            <img src="Dist/img/ignitePhotos/ricardo.png"/>
+                            <img src="Dist/img/ignitePhotos/flor.png"/>
+						</div>
+					</div>
+					<div class="log_container" style="display: none;">
+						<p class="demo_label">Log</p>
+						<div id="msg">
+						</div>
+					</div>
+                </div>
+                <div class="span4">
+                    <div class="row" style="margin-top: 40px;">
+                        
+                        <div class="span6">
+                            <img src="Dist/img/preguntados/chara-tina.png" alt="Arrow" style=" height: 250px; width: 250px;">
+                        </div>
+                        <!-- <div class="span2"></div> -->
+                        <div class="span6">
+                            <img src="Dist/img/preguntados/chara-tito.png" alt="Arrow" style="margin-top: 15px; height: 250px; width: 250px;">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="span4">
+					<div class="roulette_container">
+						<div class="roulette" style="display:none;">
+							<img src="Dist/img/ignitePhotos/alexis.jpg"/>
+							<img src="Dist/img/ignitePhotos/ana.PNG"/>
+							<img src="Dist/img/ignitePhotos/andres.jpg"/>
+							<img src="Dist/img/ignitePhotos/antonio.jpg"/>
+							<img src="Dist/img/ignitePhotos/cesar.png"/>
+							<img src="Dist/img/ignitePhotos/emilio.png"/>
+							<img src="Dist/img/ignitePhotos/fernando.jpg"/>
+							<img src="Dist/img/ignitePhotos/ivan.jpg"/>
+							<img src="Dist/img/ignitePhotos/leslie.png"/>
+							<img src="Dist/img/ignitePhotos/max.png"/>
+                            <img src="Dist/img/ignitePhotos/ricardo.png"/>
+                            <img src="Dist/img/ignitePhotos/flor.png"/>
+						</div>
+					</div>
+					<div class="log_container" style="display: none;">
+						<p class="demo_label">Log</p>
+						<div id="msg">
+						</div>
+					</div>
+				</div>
+				<div class="span4"  style="display: none;">
+					<div class="right_container">
+						<p class="demo_label">Paramater</p>
+						<div class="speed_value param_label">
+							<span class="param_name">speed :</span> <span class="speed_param"></span>
+						</div>
+						<div id="speed"> </div>
+						
+						<div class="duration_value param_label">
+							<span class="param_name">duration :</span> <span class="duration_param"></span>
+						</div>
+						<div id="duration"> </div>
+						
+						<div class="stop_image_number_value param_label">
+							<span class="param_name">stop image number :</span> <span class="stop_image_number_param"></span>
+						</div>
+						<input id="stopImageNumber" name="stopImageNumber"/>
+						<span class="image_sample">
+                            <img data-value="0" src="Dist/img/ignitePhotos/alexis.jpg"/>
+							<img data-value="1" src="Dist/img/ignitePhotos/ana.PNG"/>
+							<img data-value="2" src="Dist/img/ignitePhotos/andres.jpg"/>
+							<img data-value="3" src="Dist/img/ignitePhotos/antonio.jpg"/>
+							<img data-value="4" src="Dist/img/ignitePhotos/cesar.png"/>
+							<img data-value="5" src="Dist/img/ignitePhotos/emilio.png"/>
+							<img data-value="6" src="Dist/img/ignitePhotos/fernando.jpg"/>
+							<img data-value="7" src="Dist/img/ignitePhotos/ivan.jpg"/>
+							<img data-value="8" src="Dist/img/ignitePhotos/leslie.png"/>
+							<img data-value="9" src="Dist/img/ignitePhotos/max.png"/>
+							<img data-value="10" src="Dist/img/ignitePhotos/ricardo.png"/>
+							<img data-value="11" src="Dist/img/ignitePhotos/flor.png"/>
+							<img data-value="-1" src="Dist/img/random.png" title="random"/>
+						</span>
+					</div>
+				</div>
+            </div>
+            <div class="row">
+                <div class="btn_container">
+                    <p>
+                    <button class="btn btn-large btn-warning start"> START </button>
+                    <button class="stop btn-large btn btn-warning" style="display: none;"> STOP </button>
+                    </p>
+                </div>
+            </div>
+		</div>
+        
+        </div>
+
+        <div style="height: 130px;"></div>
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                    </div>
+                    <div class="span2">
+                        <p style="color: white;">Se intento 😘</p>
+                    </div>
+                    <div class="span5"></div>
+                </div>
+            </div>
+          </div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+		<script src="roulette.js"></script>
+		<script src="demo.js"></script>
+        
+        <script>
+            var questions = [
+                "que proyectos personales o de la escuela tienes de los cuales estas mas orgullosa(o)?",
+                "hobbies o actividades que disfrutes hacer fuera del trabajo",
+                "en que tecnologias de programacion o desarrollo te consideras bueno?",
+                "Cual es tu animal favorito?",
+                "Si pudieras andar con una celebridad con quien seria?",
+                "Cual es tu pelicula favorita?",
+                "Cual es tu banda/cantante favorito?",
+                "Hay algo que te de miedo?",
+                "Cual es tu banda favorita?",
+                "En tiempos de pandemia, cual es tu actividad favorita?",
+                "Algun lugar que te gustaria conocer?",
+                "Cual es tu mascota preferida? ",
+                "Que es lo que mas te gusta del equipo de ignite?",
+                "Cual es tu banda favorita?",
+                "Cual es la ciudad a la que hayas ido que mas te gusta?",
+                "Si pudieras vivir en otro pais, cual seria?",
+                "Cual es tu serie favorita?",
+                "Cuales son tus videojuegos favoritos?",
+                "¿Cuál es tu 'gusto culposo' musical?",
+                "¿A que le tienes miedo?",
+                "¿Cuál estación del año prefieres?",
+                "¿Cuál es la comida que menos te gusta?",
+                "¿Quién es tu superhéroe o superheroína favorito(a)?",
+                "Cual es tu color favorito?",
+                "Voulez-vous coucher avec moi, ce soir?",
+                "Prefieres pelear contra 20 patos del tama;o de un toro o contra 25 toros de tama;o de un pato?",
+                "Cual es tu bebida favorita?",
+                "Esos son reebok o son nike? (Marca de tenis preferida)",
+                "Has reprobado una clase?? En carrera o prepa.",
+                "Haz tenido novia/novio?? Si si, cuantos?",
+                "Si el dinero no importara y pudieras hacer lo que quieras?? A que te hubieras dedicado??",
+                "Te han operado? Te has roto un hueso??",
+                "Te pondrias un tatuaje??",
+                "Cual es la finalidad del patito de hule?",
+                "Que es algo que siempre has querido hacer pero no has hecho?",
+                "Cual dirias que es tu mayor virtud?",
+                "Cual dirias que es tu mayor debilidad?",
+                "Cual es el tipo de pan que mas te gusta (dulce o salado)?",
+                "Que generos de musica o que grupos musicales te gustan?",
+                "Que otros intereses tienes aparte del area de TI?",
+                "Has viajado dentro o fuera del pais? A donde?",
+                "Vino? Cerveza? O licor?",
+                "Alguna serie que recomiendes? ",
+                "¿Qué es algo que no toleras de una persona?",
+                "¿Cuá ha sido el momento más representativo de tu vida?",
+                "¿Si tuvieras un súper poder cuál sería?",
+                "¿Con qué tipo de animal te identificas?",
+                "Si fueras millonario ¿qué sería lo primero que harías?",
+                "Tu top 3 en spotify?",
+                "Si no hubieras escogido tu path o tu carrera, que te hubiera gustado ser?",
+                "En estos momentos a donde quisieras viajar?",
+                "Algun comestible que NO te guste, pero a los demas si?",
+                "Cual es tu pelicula/serie que mas te a gustado hasta ahora? y por que es Sangre por sangre?",
+                "Como se llama el hermano yucateco de emilio?",
+                "Como se llama el hermano regio de emilio?",
+                "Como se llama el hermano chiapaneco de emilio?",
+                "Cual es el hermano de emilio con el que tenemos contacto actualmente?",
+                "Cual es tu color fav"];
+            
+            function randomInteger(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function winner(){
+                questions = questions[randomInteger(0,questions.length-1)];
+                console.log(questions);
+                $("#winner").val(questions);
+            }
+
+            setTimeout(function(){ 
+                winner();
+		  	}, 1000);
+        </script>
+	</body>
+</html>
